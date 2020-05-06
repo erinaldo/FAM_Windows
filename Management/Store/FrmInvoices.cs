@@ -41,9 +41,9 @@ namespace Baran.Ferroalloy.Management.Store
         {
             using (UnitOfWork db = new UnitOfWork())
             {
-               var invoices = db.Invoices.FilterInvoices(txtBrand.Text.Trim(), (int) numInvoiceNumbrOfOwner.Value,
-                    (int) numInvoiceNumberOfVendor.Value, cbBuyerNames.SelectedItem, dtpFromDate.Value, dtpToDate.Value);
-               dgvInvoice.DataSource=db.Invoices.FillDgvInvoices(invoices);
+                var invoices = db.Invoices.FilterInvoices(txtBrand.Text.Trim(), (int)numInvoiceNumbrOfOwner.Value,
+                     (int)numInvoiceNumberOfVendor.Value, cbBuyerNames.SelectedItem, dtpFromDate.Value, dtpToDate.Value);
+                dgvInvoice.DataSource = db.Invoices.FillDgvInvoices(invoices);
             }
 
         }
@@ -134,6 +134,20 @@ namespace Baran.Ferroalloy.Management.Store
         private void BtmExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BtmInvoiceItems_Click(object sender, EventArgs e)
+        {
+            if (dgvInvoice.CurrentRow != null)
+            {
+                FrmInvoiceItems frmInvoiceItems=new FrmInvoiceItems();
+                frmInvoiceItems.invoiceId = Convert.ToInt32(dgvInvoice.CurrentRow.Cells["InvoiceNumbrOfOwner"].Value.ToString());
+                frmInvoiceItems.Show();
+            }
+            else
+            {
+                RtlMessageBox.Show("لطفا یک سط راانتخاب کنید", "اخطار", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

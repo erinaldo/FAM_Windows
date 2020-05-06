@@ -52,8 +52,9 @@
             // 
             // btmSelect
             // 
+            this.btmSelect.Font = new System.Drawing.Font("B Yekan", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btmSelect.Location = new System.Drawing.Point(318, 485);
-            this.btmSelect.Margin = new System.Windows.Forms.Padding(4);
+            this.btmSelect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btmSelect.Name = "btmSelect";
             this.btmSelect.Size = new System.Drawing.Size(125, 35);
             this.btmSelect.TabIndex = 47;
@@ -63,8 +64,9 @@
             // 
             // btmClose
             // 
+            this.btmClose.Font = new System.Drawing.Font("B Yekan", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btmClose.Location = new System.Drawing.Point(463, 485);
-            this.btmClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btmClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btmClose.Name = "btmClose";
             this.btmClose.Size = new System.Drawing.Size(125, 35);
             this.btmClose.TabIndex = 46;
@@ -126,7 +128,7 @@
             this.cbCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategories.FormattingEnabled = true;
             this.cbCategories.Location = new System.Drawing.Point(256, 65);
-            this.cbCategories.Margin = new System.Windows.Forms.Padding(4);
+            this.cbCategories.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbCategories.Name = "cbCategories";
             this.cbCategories.Size = new System.Drawing.Size(133, 28);
             this.cbCategories.TabIndex = 49;
@@ -163,7 +165,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btmSearch.Font = new System.Drawing.Font("B Yekan", 11F);
             this.btmSearch.Location = new System.Drawing.Point(634, 168);
-            this.btmSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btmSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btmSearch.Name = "btmSearch";
             this.btmSearch.Size = new System.Drawing.Size(186, 28);
             this.btmSearch.TabIndex = 56;
@@ -173,6 +175,9 @@
             // 
             // dgvVendors
             // 
+            this.dgvVendors.AllowUserToAddRows = false;
+            this.dgvVendors.AllowUserToDeleteRows = false;
+            this.dgvVendors.AllowUserToOrderColumns = true;
             this.dgvVendors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVendors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVendors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -185,6 +190,8 @@
             this.Address});
             this.dgvVendors.Location = new System.Drawing.Point(71, 203);
             this.dgvVendors.Name = "dgvVendors";
+            this.dgvVendors.ReadOnly = true;
+            this.dgvVendors.RowHeadersWidth = 51;
             this.dgvVendors.Size = new System.Drawing.Size(749, 240);
             this.dgvVendors.TabIndex = 57;
             // 
@@ -192,45 +199,59 @@
             // 
             this.intID.DataPropertyName = "intID";
             this.intID.HeaderText = "intID";
+            this.intID.MinimumWidth = 6;
             this.intID.Name = "intID";
+            this.intID.ReadOnly = true;
             this.intID.Visible = false;
             // 
             // intNumber
             // 
             this.intNumber.DataPropertyName = "intNumber";
             this.intNumber.HeaderText = "intNumber";
+            this.intNumber.MinimumWidth = 6;
             this.intNumber.Name = "intNumber";
+            this.intNumber.ReadOnly = true;
             this.intNumber.Visible = false;
             // 
             // CategoryTitle
             // 
             this.CategoryTitle.DataPropertyName = "CategoryTitle";
             this.CategoryTitle.HeaderText = "رسته";
+            this.CategoryTitle.MinimumWidth = 6;
             this.CategoryTitle.Name = "CategoryTitle";
+            this.CategoryTitle.ReadOnly = true;
             // 
             // Brand1
             // 
             this.Brand1.DataPropertyName = "Brand";
             this.Brand1.HeaderText = "نام فروشگاه";
+            this.Brand1.MinimumWidth = 6;
             this.Brand1.Name = "Brand1";
+            this.Brand1.ReadOnly = true;
             // 
             // FirstName
             // 
             this.FirstName.DataPropertyName = "FirstName";
             this.FirstName.HeaderText = "نام";
+            this.FirstName.MinimumWidth = 6;
             this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
             // 
             // LastName
             // 
             this.LastName.DataPropertyName = "LastName";
             this.LastName.HeaderText = "نام خانوادگی";
+            this.LastName.MinimumWidth = 6;
             this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
             // 
             // Address
             // 
             this.Address.DataPropertyName = "Address";
             this.Address.HeaderText = "آدرس";
+            this.Address.MinimumWidth = 6;
             this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
             // 
             // FrmSelectVendor
             // 

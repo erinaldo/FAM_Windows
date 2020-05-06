@@ -48,7 +48,7 @@
             this.btmInsert = new System.Windows.Forms.Button();
             this.btmDelete = new System.Windows.Forms.Button();
             this.btmExit = new System.Windows.Forms.Button();
-            this.btmIsert2 = new System.Windows.Forms.Button();
+            this.btmInvoiceItems = new System.Windows.Forms.Button();
             this.chbDateCheck = new System.Windows.Forms.CheckBox();
             this.dtpToDate = new System.Windows.Forms.DateTimePicker();
             this.labToDate = new System.Windows.Forms.Label();
@@ -267,18 +267,19 @@
             this.btmExit.UseVisualStyleBackColor = true;
             this.btmExit.Click += new System.EventHandler(this.BtmExit_Click);
             // 
-            // btmIsert2
+            // btmInvoiceItems
             // 
-            this.btmIsert2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btmInvoiceItems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btmIsert2.Font = new System.Drawing.Font("B Yekan", 11F);
-            this.btmIsert2.Location = new System.Drawing.Point(772, 632);
-            this.btmIsert2.Margin = new System.Windows.Forms.Padding(0);
-            this.btmIsert2.Name = "btmIsert2";
-            this.btmIsert2.Size = new System.Drawing.Size(127, 35);
-            this.btmIsert2.TabIndex = 57;
-            this.btmIsert2.Text = "ورود آیتم فاکتور";
-            this.btmIsert2.UseVisualStyleBackColor = true;
+            this.btmInvoiceItems.Font = new System.Drawing.Font("B Yekan", 11F);
+            this.btmInvoiceItems.Location = new System.Drawing.Point(772, 632);
+            this.btmInvoiceItems.Margin = new System.Windows.Forms.Padding(0);
+            this.btmInvoiceItems.Name = "btmInvoiceItems";
+            this.btmInvoiceItems.Size = new System.Drawing.Size(127, 35);
+            this.btmInvoiceItems.TabIndex = 57;
+            this.btmInvoiceItems.Text = "ورود آیتم فاکتور";
+            this.btmInvoiceItems.UseVisualStyleBackColor = true;
+            this.btmInvoiceItems.Click += new System.EventHandler(this.BtmInvoiceItems_Click);
             // 
             // chbDateCheck
             // 
@@ -303,7 +304,6 @@
             // labToDate
             // 
             this.labToDate.AutoSize = true;
-            this.labToDate.Enabled = false;
             this.labToDate.Location = new System.Drawing.Point(703, 102);
             this.labToDate.Name = "labToDate";
             this.labToDate.Size = new System.Drawing.Size(20, 20);
@@ -322,7 +322,6 @@
             // labFromDate
             // 
             this.labFromDate.AutoSize = true;
-            this.labFromDate.Enabled = false;
             this.labFromDate.Location = new System.Drawing.Point(435, 102);
             this.labFromDate.Name = "labFromDate";
             this.labFromDate.Size = new System.Drawing.Size(23, 20);
@@ -382,7 +381,7 @@
             this.Controls.Add(this.labToDate);
             this.Controls.Add(this.dtpFromDate);
             this.Controls.Add(this.labFromDate);
-            this.Controls.Add(this.btmIsert2);
+            this.Controls.Add(this.btmInvoiceItems);
             this.Controls.Add(this.btmInsert);
             this.Controls.Add(this.btmDelete);
             this.Controls.Add(this.btmExit);
@@ -424,7 +423,7 @@
         private System.Windows.Forms.Button btmInsert;
         private System.Windows.Forms.Button btmDelete;
         private System.Windows.Forms.Button btmExit;
-        private System.Windows.Forms.Button btmIsert2;
+        private System.Windows.Forms.Button btmInvoiceItems;
         private System.Windows.Forms.CheckBox chbDateCheck;
         private System.Windows.Forms.DateTimePicker dtpToDate;
         private System.Windows.Forms.Label labToDate;

@@ -28,7 +28,7 @@ namespace Baran.Ferroalloy.Management
         private Employee emLogined;
         private string strXmlPath;
         public bool type;
-
+        public string coIdLogined;
         public Management()
         {
             InitializeComponent();
@@ -360,12 +360,19 @@ namespace Baran.Ferroalloy.Management
                 menWindowsRequests.Click += new System.EventHandler(this.menWindowsEmployees_Click);
                 this.menWindows.DropDownItems.Add(menWindowsRequests);
 
-                Requests frmRequests = new Requests();
-                frmRequests.MdiParent = this;
-                frmRequests.cnConnection = this.cnConnection;
-                frmRequests.usUser = this.usLogined;
-                frmRequests.Show();
-                frmRequests.WindowState = FormWindowState.Maximized;
+                FrmBuyRequests frmBuyRequests=new FrmBuyRequests();
+                frmBuyRequests.MdiParent = this;
+                frmBuyRequests.cnConnection = this.cnConnection;
+                frmBuyRequests.usUser = this.usLogined;
+                frmBuyRequests.coId = coIdLogined;
+                frmBuyRequests.Show();
+                frmBuyRequests.WindowState = FormWindowState.Maximized;
+                //Requests frmRequests = new Requests();
+                //frmRequests.MdiParent = this;
+                //frmRequests.cnConnection = this.cnConnection;
+                //frmRequests.usUser = this.usLogined;
+                //frmRequests.Show();
+                //frmRequests.WindowState = FormWindowState.Maximized;
             }
         }
 

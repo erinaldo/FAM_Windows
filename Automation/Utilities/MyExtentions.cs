@@ -255,5 +255,68 @@ namespace Baran.Ferroalloy.Automation
             };
             return model;
         }
+
+        //--------------------------------------------------------------------------------
+        public static string GetPartName(this char[] array)
+        {
+            using (UnitOfWork db=new UnitOfWork())
+            {
+                var partNameId = 0;
+                var branchId = 0;
+                var subBranchId = 0;
+                if (array[4] == '0')
+                {
+                    partNameId = Convert.ToInt32(array[5].ToString());
+
+                }
+                else
+                {
+                    partNameId = Convert.ToInt32(array[4] + "" + array[5]);
+                }
+                if (array[6] == '0')
+                {
+                    branchId = Convert.ToInt32(array[7].ToString());
+
+                }
+                else
+                {
+                    branchId = Convert.ToInt32(array[6] + "" + array[7]);
+                }
+                if (array[8] == '0')
+                {
+                    subBranchId = Convert.ToInt32(array[9].ToString());
+
+                }
+                else
+                {
+                    subBranchId = Convert.ToInt32(array[8] + "" + array[9]);
+                }
+
+                var partName = db.PartName.GetEntity(t => t.intNumber == partNameId).nvcName;
+                var partBranch = db.PartBranch.GetEntity(t => t.intNumber == branchId).nvcName;
+                var partSubBranch = db.PartSubBranch.GetEntity(t => t.intNumber == subBranchId).nvcName;
+                return partName + " " + partBranch + " " + partSubBranch;
+            }
+        }
+
+        //--------------------------------------------------------------------------------
+        public static string GetMeasurementUnit(this char[] array)
+        {
+            var categoryId = 0;
+            if (array[2] == '0')
+            {
+                categoryId = Convert.ToInt32(array[3].ToString());
+
+            }
+            else
+            {
+                categoryId = Convert.ToInt32(array[2] + "" + array[3]);
+            }
+
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                return db.MeasurementUnits.GetEntity(t => t.intCategory == categoryId).nvcName;
+            }
+        }
     }
 }

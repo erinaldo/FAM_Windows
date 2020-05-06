@@ -40,7 +40,48 @@ namespace Baran.Ferroalloy.Automation
         private ISubProjects _subProjects;
         private IVendors _vendors;
         private IInvoices _invoices;
+        private IInvoiceItems _invoiceItems;
+        private IBuyRequestItems _buyRequestItems;
+        private IBuyRequests _buyRequests;
 
+        public IBuyRequests BuyRequests
+        {
+            get
+            {
+                if (_buyRequests == null)
+                {
+                    _buyRequests=new BuyRequestsService(db);
+                }
+
+                return _buyRequests;
+            }
+        }
+
+        public IBuyRequestItems BuyRequestItems
+        {
+            get
+            {
+                if (_buyRequestItems == null)
+                {
+                    _buyRequestItems=new BuyRequestItemsService(db);
+                }
+
+                return _buyRequestItems;
+            }
+        }
+
+        public IInvoiceItems InvoiceItems
+        {
+            get
+            {
+                if (_invoiceItems == null)
+                {
+                    _invoiceItems=new InvoiceItemsService(db);
+                }
+
+                return _invoiceItems;
+            }
+        }
 
         public IInvoices Invoices
         {
@@ -67,8 +108,6 @@ namespace Baran.Ferroalloy.Automation
                 return _vendors;
             }
         }
-
-
         public IPartTypes PartTypes
         {
             get

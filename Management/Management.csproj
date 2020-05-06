@@ -46,6 +46,7 @@
       <HintPath>.\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="S7.Net">
+      <HintPath>C:\Users\rayana\Desktop\S7.Net.dll</HintPath>
       <HintPath>..\S7.Net.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Base">
@@ -688,11 +689,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Store\FrmBuyRequestItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\FrmBuyRequestItems.Designer.cs">
+      <DependentUpon>FrmBuyRequestItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\FrmBuyRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\FrmBuyRequests.Designer.cs">
+      <DependentUpon>FrmBuyRequests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Store\FrmInvoiceInsert.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Store\FrmInvoiceInsert.Designer.cs">
       <DependentUpon>FrmInvoiceInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\FrmInvoiceItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\FrmInvoiceItems.Designer.cs">
+      <DependentUpon>FrmInvoiceItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Store\FrmInvoices.cs">
       <SubType>Form</SubType>
@@ -705,6 +724,12 @@
     </Compile>
     <Compile Include="Store\FrmInvoiceUpdate.Designer.cs">
       <DependentUpon>FrmInvoiceUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\FrmSelectBuyRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\FrmSelectBuyRequest.Designer.cs">
+      <DependentUpon>FrmSelectBuyRequest.cs</DependentUpon>
     </Compile>
     <Compile Include="Store\FrmSelectVendor.cs">
       <SubType>Form</SubType>
@@ -1259,14 +1284,26 @@
     <EmbeddedResource Include="Production\ProductionPrefrences.resx">
       <DependentUpon>ProductionPrefrences.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Store\FrmBuyRequestItems.resx">
+      <DependentUpon>FrmBuyRequestItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store\FrmBuyRequests.resx">
+      <DependentUpon>FrmBuyRequests.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Store\FrmInvoiceInsert.resx">
       <DependentUpon>FrmInvoiceInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store\FrmInvoiceItems.resx">
+      <DependentUpon>FrmInvoiceItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Store\FrmInvoices.resx">
       <DependentUpon>FrmInvoices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Store\FrmInvoiceUpdate.resx">
       <DependentUpon>FrmInvoiceUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store\FrmSelectBuyRequest.resx">
+      <DependentUpon>FrmSelectBuyRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Store\FrmSelectVendor.resx">
       <DependentUpon>FrmSelectVendor.cs</DependentUpon>
